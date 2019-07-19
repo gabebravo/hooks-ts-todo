@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import Todos from './Todos';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,7 +25,9 @@ const App: React.FC = () => {
           </Toolbar>
         </AppBar>
       </div>
-      <h3>Hello World</h3>
+      <div>
+        <Todos />
+      </div>
     </>
   );
 };
