@@ -1,4 +1,4 @@
-export interface TodoI {
+export interface TodoProps {
   userId: number;
   id: number;
   title: string;

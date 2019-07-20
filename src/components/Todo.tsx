@@ -9,9 +9,9 @@ import {
 } from '@material-ui/core';
 import NotesIcon from '@material-ui/icons/Notes';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { TodoI } from '../types';
+import { TodoProps } from '../types';
 
-export default function Todo(todo: TodoI) {
+export default function Todo(todo: TodoProps) {
   const { title, completed } = todo;
   return (
     <ListItem>
