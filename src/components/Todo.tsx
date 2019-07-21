@@ -12,7 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import { GlobalContext } from '../context';
 import { TodoProps } from '../types';
 
-export default function Todo(todo: TodoProps) {
+const Todos: React.FC<TodoProps> = (todo): JSX.Element => {
   const { id, title, completed } = todo;
   const globalReducer = React.useContext(GlobalContext);
   const { dispatch } = globalReducer;
@@ -43,4 +43,6 @@ export default function Todo(todo: TodoProps) {
       </ListItemSecondaryAction>
     </ListItem>
   );
-}
+};
+
+export default Todos;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Grid, Typography, List } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { GlobalContext } from '../context';
@@ -19,21 +19,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Todos() {
-  const globalReducer = React.useContext(GlobalContext);
-  const { state, dispatch } = globalReducer;
-  const { todos } = state;
+const Todos: React.FC = (): JSX.Element => {
   const classes = useStyles();
+  const globalReducer = React.useContext(GlobalContext);
+  const {
+    state: { todos }
+  } = globalReducer;
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(res => res.json())
-      .then(json => {
-        dispatch({ type: 'SET_TODOS', payload: json });
-      });
-  }, []);
-
-  console.log('state', state);
+  console.log('todos', todos);
 
   return (
     <div className={classes.root}>
@@ -53,4 +46,6 @@ export default function Todos() {
       )}
     </div>
   );
-}
+};
+
+export default Todos;
