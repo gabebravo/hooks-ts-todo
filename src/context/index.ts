@@ -31,7 +31,7 @@ export function globalReducer(state: State, action: Action): State {
     case 'DELETE_TODOS':
       return {
         ...state,
-        todos: [...todos].filter(todo => todo.id !== payload.id)
+        todos: [...todos].filter(todo => todo.id !== payload)
       };
     default:
       return state;

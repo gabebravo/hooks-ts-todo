@@ -14,11 +14,11 @@ import { TodoProps } from '../types';
 
 export default function Todo(todo: TodoProps) {
   const { id, title, completed } = todo;
+  const globalReducer = React.useContext(GlobalContext);
+  const { dispatch } = globalReducer;
 
   const deleteTodo = (id: number): void => {
-    const globalReducer = React.useContext(GlobalContext);
-    const { dispatch } = globalReducer;
-    dispatch({ type: 'DELETE_TODO', payload: id });
+    dispatch({ type: 'DELETE_TODOS', payload: id });
   };
 
   return (
