@@ -9,10 +9,18 @@ import {
 } from '@material-ui/core';
 import NotesIcon from '@material-ui/icons/Notes';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { GlobalContext } from '../context';
 import { TodoProps } from '../types';
 
 export default function Todo(todo: TodoProps) {
-  const { title, completed } = todo;
+  const { id, title, completed } = todo;
+
+  const deleteTodo = (id: number): void => {
+    const globalReducer = React.useContext(GlobalContext);
+    const { dispatch } = globalReducer;
+    dispatch({ type: 'DELETE_TODO', payload: id });
+  };
+
   return (
     <ListItem>
       <ListItemAvatar>
@@ -25,7 +33,11 @@ export default function Todo(todo: TodoProps) {
         secondary={`Completed: ${String(completed)}`}
       />
       <ListItemSecondaryAction>
-        <IconButton edge="end" aria-label="Delete">
+        <IconButton
+          onClick={() => deleteTodo(id)}
+          edge="end"
+          aria-label="Delete"
+        >
           <DeleteIcon />
         </IconButton>
       </ListItemSecondaryAction>
