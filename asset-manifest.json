@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gabebravo/hooks-ts-todo/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/gabebravo/hooks-ts-todo/static/js/main.d7e4d494.chunk.js",
+    "main.js.map": "/gabebravo/hooks-ts-todo/static/js/main.d7e4d494.chunk.js.map",
+    "runtime~main.js": "/gabebravo/hooks-ts-todo/static/js/runtime~main.2eda7bdb.js",
+    "runtime~main.js.map": "/gabebravo/hooks-ts-todo/static/js/runtime~main.2eda7bdb.js.map",
+    "static/js/2.88650e86.chunk.js": "/gabebravo/hooks-ts-todo/static/js/2.88650e86.chunk.js",
+    "static/js/2.88650e86.chunk.js.map": "/gabebravo/hooks-ts-todo/static/js/2.88650e86.chunk.js.map",
+    "index.html": "/gabebravo/hooks-ts-todo/index.html",
+    "precache-manifest.4f4ceb3d5037fbcf6625d48e2874b658.js": "/gabebravo/hooks-ts-todo/precache-manifest.4f4ceb3d5037fbcf6625d48e2874b658.js",
+    "service-worker.js": "/gabebravo/hooks-ts-todo/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/gabebravo/hooks-ts-todo/static/css/main.5ecd60fb.chunk.css.map"
+  }
+}
