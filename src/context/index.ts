@@ -1,14 +1,5 @@
 import React from 'react';
-import { TodoProps } from '../types';
-
-type Action = {
-  type: string;
-  payload: any;
-};
-
-type State = {
-  todos: TodoProps[];
-};
+import { State, Action } from '../types';
 
 const initialState: State = {
   todos: []

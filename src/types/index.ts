@@ -4,3 +4,12 @@ export type TodoProps = {
   title: string;
   completed: boolean;
 };
+
+export type Action = {
+  type: string;
+  payload: any;
+};
+
+export type State = {
+  todos: TodoProps[];
+};
