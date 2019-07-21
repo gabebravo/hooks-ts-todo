@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { GlobalContext } from '../context';
+import { TodoProps } from '../types';
 import Todos from './Todos';
 
 const useStyles = makeStyles(theme => ({
@@ -21,11 +22,11 @@ const App: React.FC = (): JSX.Element => {
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos')
       .then(res => res.json())
-      .then(json => {
+      .then((json: TodoProps[]) => {
         dispatch({ type: 'SET_TODOS', payload: json });
       });
   }, []);
-  
+
   return (
     <>
       <div className={classes.root}>
